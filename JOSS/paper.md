@@ -72,8 +72,9 @@ variants of SPOD, (i) a low storage [@towne2017,@schmidt2019a],
 (ii) a low RAM [@towne2017,@schmidt2019a], and (iii) a streaming version 
 [@schmidt2019b]. The three versions differ in terms of I/O and RAM requirements. 
 The low storage version allows faster computations, and it is intended for small 
-datasets, or high RAM machines. The low RAM and streaming versions can handle 
-large datasets, but they are typically slower than the low storage counterpart. 
+datasets, or high RAM machines. The low RAM version can handle 
+large datasets, but it is typically slower than the low storage counterpart. 
+The streaming version is a streaming implementation of SPOD.
 The API to the library offers a flexible and user-friendly experience, and 
 the library can be complemented with additional SPOD algorithms in an easy-to-implement
 way. The structure of the library and the use of Python enable efficient 

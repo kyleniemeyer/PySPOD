@@ -39,11 +39,11 @@ prove crucial to facilitate the construction of modeling tools that can
 help anticipate scenarios that would not otherwise be predictable.
 
 Within this context, dynamical systems theory, complemented with recent 
-advances in machine learning and data mining tools, is achieving tremendous 
+developments in machine learning and data mining tools, is achieving tremendous 
 advances in our ability to acquire actionable information from complex 
-data. Singular-value decomposition based tools, in particular, are a 
-promising area that is gaining popularity, due to its links to reduced 
-order modeling and dynamical systems. Also, these tools can be used in 
+data. Singular-value decomposition based techniques, in particular, are a 
+promising area that is gaining popularity, due to their links to reduced 
+order modeling and dynamical systems. Also, these techniques can be used in 
 the context of machine learning as additional inputs to the learning 
 architecture, thereby augmenting the dataset and possibly helping in 
 the interpretability of the results. 

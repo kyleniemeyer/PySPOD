@@ -112,7 +112,7 @@ simulation, the interested reader can refer to [@schmidt2019a].
 
 
 # Acknowledgements
-G. Mengaldo want to thank Oliver T. Schmidt for fruitful discussions. We also thank the reviewers who helped substantially improve the software package. 
+G. Mengaldo wants to thank Oliver T. Schmidt for fruitful discussions. We also thank the reviewers who helped substantially improve the software package. 
 
 
 

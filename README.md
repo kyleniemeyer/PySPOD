@@ -1,6 +1,6 @@
 <p align="center">
   <a href="http://mengaldo.github.io/PySPOD/" target="_blank" >
-    <img alt="Python Spectral Proper Orthogonal Decomposition" src="readme/PySPOD_logo.png" width="200" />
+    <img alt="Python Spectral Proper Orthogonal Decomposition" src="readme/PySPOD_logo2.png" width="200" />
   </a>
 </p>
 
@@ -8,18 +8,23 @@
 <!--    <a href="https://doi.org/" target="_blank">
     <img alt="JOSS DOI" src="http://joss.theoj.org/">
   </a> -->
+
   <a href="https://github.com/mengaldo/PySPOD/LICENSE" target="_blank">
     <img alt="Software License" src="https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square">
   </a>
-  <a href="https://badge.fury.io/py/pydmd">
+
+  <a href="https://badge.fury.io/py/pyspod">
     <img src="https://badge.fury.io/py/pyspod.svg" alt="PyPI version" height="18">
   </a>
+
   <a href="https://travis-ci.com/mengaldo/PySPOD" target="_blank">
     <img alt="Build Status" src="https://travis-ci.com/mengaldo/PySPOD.svg?token=sY467gr18pmboZ16AN1x&branch=main">	  
   </a>
-<!--    <a href="https://coveralls.io/github/mathLab/PySPOD" target="_blank">
-    <img alt="Coverage Status" src="https://coveralls.io/repos/github/mathLab/PySPOD/badge.svg">
-  </a> -->
+
+  <a href="https://coveralls.io/github/mengaldo/PySPOD?branch=main" target="_blank">
+    <img src="https://coveralls.io/repos/github/mengaldo/PySPOD/badge.svg?branch=main" alt="Coverage Status" />
+  </a>
+
   <a href="https://www.codacy.com?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=mengaldo/PySPOD&amp;utm_campaign=Badge_Grade">
     <img src="https://app.codacy.com/project/badge/Grade/7ac24e711aea47df806ad52ab067e3a6"/>
   </a>
@@ -29,22 +34,21 @@
 
 ## Table of contents
 
-    * [Description](#description)
-    * [Installation and dependencies](#installation-and-dependencies)
-	    * [Installing via PIP](#installing-via-pip)
-	    * [Installing from source](#installing-from-source)
-    * [Documentation](#documentation)
-    * [Testing](#testing)
-    * [Tutorials](#tutorials)
-    * [References](#references)
-    * [Recent works with PySPOD](#recent-works-with-pyspod)
-    * [Authors and contributors](#authors-and-contributors)
-    * [License](#license)
+  * [Description](#description)
+  * [Installation and dependencies](#installation-and-dependencies)
+    * [Installing via PIP](#installing-via-pip)
+    * [Installing from source](#installing-from-source)
+  * [Documentation](#documentation)
+  * [Testing](#testing)
+  * [References](#references)
+  * [Recent works with PySPOD](#recent-works-with-pyspod)
+  * [Authors and contributors](#authors-and-contributors)
+  * [License](#license)
 
 ## Description
-**PySPOD** is a Python package that implements the so-called **Spectral Proper Orthgonal Decomposition** whose name was first conied by (picard-&-delville-2000), and goes back to the original work by [(Lumley 1970)](#lumley-1970). The implementation proposed here follows the original contributions by [(Towne et al. 2018)](#towne-et-al-2018), [(Schmidt and Towne 2019)](#schmidt-and-towne-2019).
+**PySPOD** is a Python package that implements the so-called **Spectral Proper Orthgonal Decomposition** whose name was first conied by [(Picard and Delville 2000)](#picard-and-delville-2000), and goes back to the original work by [(Lumley 1970)](#lumley-1970). The implementation proposed here follows the original contributions by [(Towne et al. 2018)](#towne-et-al-2018), [(Schmidt and Towne 2019)](#schmidt-and-towne-2019).
 
-**Spectral Proper Orthgonal Decomposition (SPOD)** has been extensively used in the past few years to identify spatio-temporal coherent pattern in a variety of datasets, mainly in the fluidmechanics and climate communities. In fluidmechanics it was applied to jets [(Schmidt et al. 2017)](#schmidt-et-al-2017), wakes [(Araya et al. 2017)](#araya-et-al-2017), and boundary layers [(Tutkun and George 2017)](#tutkun-and-george-2017), among others, while in weather and climate it was applied to ECMWF reanalysis datasets under the name Spectral Empirical Orthogonal Function, or SEOF, [(Schmidt et al. 2019)](#schmidt-et-al-2019).
+**Spectral Proper Orthgonal Decomposition (SPOD)** has been extensively used in the past few years to identify spatio-temporal coherent patterns in a variety of datasets, mainly in the fluidmechanics and climate communities. In fluidmechanics it was applied to jets [(Schmidt et al. 2017)](#schmidt-et-al-2017), wakes [(Araya et al. 2017)](#araya-et-al-2017), and boundary layers [(Tutkun and George 2017)](#tutkun-and-george-2017), among others, while in weather and climate it was applied to ECMWF reanalysis datasets under the name Spectral Empirical Orthogonal Function, or SEOF, [(Schmidt et al. 2019)](#schmidt-et-al-2019).
 
 The SPOD approach targets statistically stationary problems and involves the decomposition of the cross-spectral density tensor. This means that the SPOD leads to a set of spatial modes that oscillate in time at a single frequency and that optimally capture the variance of an ensemble of stochastic data [(Towne et al. 2018)](#towne-et-al-2018). Therefore, given a dataset that is statistically stationary, one is able to capture the optimal spatio-temporal coherent structures that explain the variance in the dataset. 
 
@@ -52,21 +56,30 @@ This can help identifying relations to multiple variables or understanding the r
 
 In this package we implement three version of SPOD 
 
-    - SPOD_low_storage: that is intended for large RAM machines or small datasets
-    - SPOD_low_ram: that is intended for small RAM machines or large datasets, and 
-    - SPOD_streaming: that is the algorithm presented in [(Schmidt and Towne 2019)](schmidt-and-towne-2019), and it is intended for large datasets.
+  - SPOD_low_storage: that is intended for large RAM machines or small datasets
+  - SPOD_low_ram: that is intended for small RAM machines or large datasets, and 
+  - SPOD_streaming: that is the algorithm presented in [(Schmidt and Towne 2019)](schmidt-and-towne-2019).
 
 To see how to use the **PySPOD** package and its user-friendly interface, you can look at the [**Tutorials**](tutorials/README.md). 
 
 ## Installation and dependencies
-**PySPOD** requires `numpy`, `scipy`, `matplotlib`, `pyfftw`, `future`, `sphinx` (for the documentation). The code is developed and tested for Python 3 only. 
+**PySPOD** requires the following Python packages: 
+`numpy`, `scipy`, `matplotlib`, `xarray`, `netcdf4`, `h5py`, `psutil`, `tdqm`, `future`, `ffmpeg`, `sphinx` (for the documentation). 
+Some of the *Climate tutorials*, additionally need `ecmwf_api_client` and `cdsapi`. 
+
+The code is developed and tested for Python 3 only. 
 It can be installed using `pip` or directly from the source code.
 
+<!-- NOTE: 
+  - to properly install netcdf4, you might need to have a local installation of `hdf5`. 
+  - to be able to use the ffmpeg functionalities of the library (generating video of your data), you need a local installation of `ffmpeg` libraries.
+  -->
+	
 ### Installing via PIP
 Mac and Linux users can install pre-built binary packages using pip.
 To install the package just type: 
 ```bash
-    > pip install pyspod
+    > pip install pyspod 
 ```
 To uninstall the package:
 ```bash
@@ -197,9 +210,7 @@ IF you want to run tests locally, you can do so by:
 ## References
 
 #### (Lumley 1970) 
-*Stochastic Tools in Turbulence.*
-
-[[DOI](https://www.elsevier.com/books/stochastic-tools-in-turbulence/lumey/978-0-12-395772-6?aaref=https%3A%2F%2Fwww.google.com)]
+*Stochastic Tools in Turbulence.* [[DOI](https://www.elsevier.com/books/stochastic-tools-in-turbulence/lumey/978-0-12-395772-6?aaref=https%3A%2F%2Fwww.google.com)]
 
 #### (Picard and Delville 2000) 
 
@@ -254,10 +265,26 @@ Please, [contact me](mailto:gianmarco.mengaldo@gmail.com) if you used PySPOD for
 
 **PySPOD** is currently developed and mantained by
 
-    * [Gianmarco Mengaldo](mailto:gianmarco.mengaldo@gmail.com).
+  * [G. Mengaldo](mailto:mpegim@nus.edu.sg), National University of Singapore.
 
-Contact me by email for further information or questions about **PySPOD**, or suggest pull requests. 
+Current active contributors include:
+
+  * [R. Maulik](https://romit-maulik.github.io), Argonne National Laboratory.
+  
+## How to contribute
+
 Contributions improving code and documentation, as well as suggestions about new features are more than welcome!
+
+The guidelines to contribute are as follows: 
+1. open a new issue describing the bug you intend to fix or the feature you want to add.
+2. fork the project and open your own branch related to the issue you just opened, and call the branch `fix/name-of-the-issue` if it is a bug fix, or `feature/name-of-the-issue` if you are adding a feature.
+3. ensure to use 4 spaces for formatting the code.
+4. if you add a feature, it should be accompanied by relevant tests to ensure it functions correctly, while the code continue to be developed.
+5. commit your changes with a self-explanatory commit message. 
+6. push your commits and submit a pull request. Please, remember to rebase properly in order to maintain a clean, linear git history.
+
+[Contact me](mailto:mpegim@nus.edu.sg) by email for further information or questions about **PySPOD** or ways on how to contribute. 
+
 
 ## License
 

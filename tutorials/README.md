@@ -9,14 +9,14 @@ functionalities of the library and practical application areas.
 
 ### Basic
 
-#### [Tutorial: Basic 1](Basic/methods_comparison/methods_comparison.ipynb)
+#### [Tutorial: Basic 1](basic/methods_comparison/methods_comparison.ipynb)
 
 In this tutorial we give an introduction to the main functionalities 
 of the package, by definining a 2D dataset and analyzing it via the 
 three SPOD algorithms implemented. In this case, we load the entire 
 data in RAM and pass it to the constructor of the SPOD class.
 
-#### [Tutorial: Basic 2](Basic/methods_comparison_file/methods_comparison_file.ipynb)
+#### [Tutorial: Basic 2](basic/methods_comparison_file/methods_comparison_file.ipynb)
 
 In this tutorial we give an introduction to the main functionalities 
 of the package, by definining a 2D dataset and analyzing it via the 
@@ -51,6 +51,13 @@ This tutorial shows how to download data from an ECMWF reanalysis dataset (ERA5)
 and use **PySPOD** to identify spatio-temporal coherent structured in univariate 
 2D data. In particular, we seek to identify spatio-temporal coherent structure in 
 high-resolution mean-sea level pressure data from the ERA5 dataset.
+
+#### [Tutorial: 2D NAM Relative Humidity](climate/NAM_2D/NAM_2D.ipynb)
+
+This tutorial explores the NAM dataset provided by NOAA, and in particular, the daily 
+relative humidity reanalysis data for a period of ten years (2008-10-28) to (2018-09-20). 
+While we use the first few years worth of data for a quick assessment, the readers are 
+encouraged to increase the number of snapshots.
 
 ### Fluidmechanics 
 
